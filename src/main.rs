@@ -61,7 +61,7 @@ fn main() {
     for t in 1..N {
 
         if t > N/2 && t<3*N/4 {
-            //x[8] = 2.0;
+            x[8] = 2.0;
             //x[9] = 2.0;
             //gyr = [0.01, 0.0, 0.05];
         } else {
@@ -75,7 +75,7 @@ fn main() {
         }
 
         attitude_filter.predict(gyr);
-        attitude_filter.filtering(&y);
+        attitude_filter.filtering(&y_true);
 
         // ---------- データ書き込み ---------- //
         // 時刻
